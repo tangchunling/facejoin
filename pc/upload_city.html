@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同城活动</title>
+    <script src='js/jquery-2.0.0.min.js'></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/upload.css">
+    <script type="text/javascript" language="javascript" src="js/eye-base.js"></script>
+    <script type="text/javascript" language="javascript" src="js/eye-all.js"></script>
+    <script type="text/javascript" language="javascript" src="js/get_activity_info.js"></script>
+</head>
+<body>
+    <div class="upload_activity_content campus_content">
+        <div class="upload_activity_line">
+            <p class="upload_activity_line_text up_title_left">填写活动基本信息</p>
+        </div>
+        <div class="campus_content_main">
+            <div class="campus_line">
+                <div class="campus_title">
+                    活动主题
+                </div>
+                <div class="campus_checkbox campus_theme">
+                    <input type="text" id='activity_theme'>
+                  
+                    <img src="images/upload_activity/close.png" alt="" class="campus_close">
+                </div>
+                  <p class="activity_remind">请填写活动主题</p>
+            </div>
+            <div class="campus_line">
+                <div class="campus_title">
+                    活动地点
+                </div>
+                <div class="campus_text">
+                    <div class="campus_checkbox campus_pointer campus_pro" onclick='show_pro()'>
+                        <input type="text" placeholder='选择省份' readonly="readonly" id="activity_pro">
+                        <div class="pro_detail">
+                            <span>北京</span><span>上海</span><span>天津</span><span>重庆</span><span>河北</span><span>山西</span>
+                            <span>河南</span><span>辽宁</span><span>吉林</span><span>黑龙江</span><span>内蒙古</span><span>江苏</span>
+                            <span>山东</span><span>安徽</span><span>浙江</span><span>福建</span><span>湖北</span><span>湖南</span>
+                            <span>广东</span><span>广西</span><span>江西</span><span>四川</span><span>海南</span><span>贵州</span>
+                            <span>云南</span><span>西藏</span><span>陕西</span><span>甘肃</span><span>青海</span><span>宁夏</span>
+                            <span>新疆</span><span>台湾</span><span>香港</span><span>澳门</span>
+                        </div>
+                    </div>
+                    <div class="campus_checkbox campus_pointer campus_city" onclick='show_school()'>
+                        <input type="text" placeholder='选择城市' id='campus_city_name'>
+                    </div>
+                    <div class="school_detail campus_city_detail">
+                    </div>
+                    <p class="campus_checkbox  campus_address">
+                        <input type="text" placeholder='输入活动地点' id='activity_address'>
+                        <img src="images/upload_activity/close.png" alt="" class="campus_close">
+                    </p>
+                   
+                </div>
+                 <p class="activity_remind">请填写活动地点</p>
+            </div>
+            <div class="campus_line">
+                <div class="campus_title">
+                    活动时间
+                </div>
+                <div class="campus_text">
+                    <p class="campus_checkbox campus_pointer campus_pro campus_date">
+                        <input onclick="eye.datePicker.show(this);" id="activity_start_date" placeholder='选择开始日期' class="date_can">
+                    </p>
+                    <p class="campus_checkbox campus_pointer campus_city campus_date campus_minute">
+                        <input placeholder='选择时刻' class='time' id="activity_start_time" onclick='$(".activity_start_time_select").toggle()'>
+                    </p>
+                    <p class='campus_time'></p>
+                    <p class="campus_checkbox campus_date campus_pointer campus_pro">
+                        <input onclick="eye.datePicker.show(this);" id="activity_end_date" placeholder='选择结束日期' class="date_can">
+                    </p>
+                    <p class="campus_checkbox campus_pointer campus_city campus_minute">
+                        <input placeholder='选择时刻' class='time' id="activity_end_time" onclick='$(".activity_end_time_select").toggle()'>
+                    </p>
+                    <div class="activity_time activity_start_time_select">
+                                <div>00:00</div><div>00:30</div><div>01:00</div><div>01:30</div><div>02:00</div><div>02:30</div><div>03:00</div><div>03:30</div><div>04:00</div><div>04:30</div><div>05:00</div><div>05:30</div><div>06:00</div><div>06:30</div><div>07:00</div><div>07:30</div><div>08:00</div><div>08:30</div><div>09:00</div><div>09:30</div><div>10:00</div><div>10:30</div><div>11:00</div><div>11:30</div><div>12:00</div><div>12:30</div><div>13:00</div><div>13:30</div><div>14:00</div><div>14:30</div><div>15:00</div><div>15:30</div><div>16:00</div><div>16:30</div><div>17:00</div><div>17:30</div><div>18:00</div><div>18:30</div><div>19:00</div><div>19:30</div><div>20:00</div><div>20:30</div><div>21:00</div><div>21:30</div><div>22:00</div><div>22:30</div><div>23:00</div><div>23:30</div>
+                            </div>
+                            <div class="activity_time activity_end_time_select">
+                                <div>00:00</div><div>00:30</div><div>01:00</div><div>01:30</div><div>02:00</div><div>02:30</div><div>03:00</div><div>03:30</div><div>04:00</div><div>04:30</div><div>05:00</div><div>05:30</div><div>06:00</div><div>06:30</div><div>07:00</div><div>07:30</div><div>08:00</div><div>08:30</div><div>09:00</div><div>09:30</div><div>10:00</div><div>10:30</div><div>11:00</div><div>11:30</div><div>12:00</div><div>12:30</div><div>13:00</div><div>13:30</div><div>14:00</div><div>14:30</div><div>15:00</div><div>15:30</div><div>16:00</div><div>16:30</div><div>17:00</div><div>17:30</div><div>18:00</div><div>18:30</div><div>19:00</div><div>19:30</div><div>20:00</div><div>20:30</div><div>21:00</div><div>21:30</div><div>22:00</div><div>22:30</div><div>23:00</div><div>23:30</div>
+                            </div>
+                </div>
+                  <p class='campus_activity_remind activity_remind activity_time_remind'>请填写活动时间</p>
+            </div>
+            <div class="campus_line">
+                <div class="campus_title">
+                    报名截止日期
+                </div>
+                <div class="campus_text sign_text">
+                    <p class="campus_checkbox campus_pointer campus_pro campus_date">
+                        <input onclick="eye.datePicker.show(this);" id="sign_end_date" placeholder='选择日期' class="date_can">
+                    </p>
+                    <p class="campus_checkbox campus_pointer campus_city campus_date campus_minute">
+                        <input placeholder='选择时刻' class='time' id="sign_end_time" onclick='$(".sign_end_time_select").toggle()'>
+                    </p>
+                  <div class="activity_time sign_end_time_select">
+                                <div>00:00</div><div>00:30</div><div>01:00</div><div>01:30</div><div>02:00</div><div>02:30</div><div>03:00</div><div>03:30</div><div>04:00</div><div>04:30</div><div>05:00</div><div>05:30</div><div>06:00</div><div>06:30</div><div>07:00</div><div>07:30</div><div>08:00</div><div>08:30</div><div>09:00</div><div>09:30</div><div>10:00</div><div>10:30</div><div>11:00</div><div>11:30</div><div>12:00</div><div>12:30</div><div>13:00</div><div>13:30</div><div>14:00</div><div>14:30</div><div>15:00</div><div>15:30</div><div>16:00</div><div>16:30</div><div>17:00</div><div>17:30</div><div>18:00</div><div>18:30</div><div>19:00</div><div>19:30</div><div>20:00</div><div>20:30</div><div>21:00</div><div>21:30</div><div>22:00</div><div>22:30</div><div>23:00</div><div>23:30</div>
+                            </div>
+                </div>
+                   <p class="activity_remind sign_end_time">请选择报名截止时间</p>
+            </div>
+            <div class="campus_line ac_people_num">
+                <div class="campus_title">
+                    人数上限
+                </div>
+                <div class="campus_text">
+                    <input type="text" placeholder='无则不填' class="form-controll" id='campus_people_num'>
+                </div>
+            </div>
+            <hr>
+            <button class="btn" onclick='city_next()'>下一步</button>
+        </div>
+    </div>
+   
+</body>
+</html>
+<script>
+    $('.campus_checkbox input').focus(function () {//控制外边框
+        $('.campus_checkbox').removeClass('campus_blue_border');
+        $(this).parent().addClass('campus_blue_border');
+
+    });
+
+    $('.campus_checkbox input').blur(function () {
+        $(this).parent().removeClass('campus_blue_border');
+
+    });
+
+    $("#activity_theme").blur(function () {
+        if ($(this).val() != '')
+            $(this).parent().find('img').show();
+        else
+            $(this).parent().find('img').hide();
+
+    });
+
+    $("#activity_address").blur(function () {
+        if ($(this).val() != '')
+            $(this).parent().find('img').show();
+        else
+            $(this).parent().find('img').hide();
+
+    });
+
+    $(".campus_close").click(function () {
+
+
+        $(this).parent().find('input').val('');
+    });
+    $(".campus_content_main .date").change(function () {//日期选择
+
+        $(this).prev().val($(this).val());
+    });
+
+    function show_pro() {//省份的显示
+        $('.school_detail').hide();
+        $('.campus_pro .pro_detail').toggle();
+    }
+    function show_school() {//学校的显示
+        $('.campus_pro .pro_detail').hide();
+        $('.school_detail').toggle();
+        var pro = $("#activity_pro").val();
+        campus_get_city(pro);
+    }
+
+    $(".campus_pro .pro_detail span").click(function () {
+        $(this).siblings().css('background-color', '#ffffff');
+        $(this).css('background-color', '#3399ff');
+
+        $(this).parent().prev().val($(this).text());
+
+
+
+    });
+
+    $(".campus_city_detail").on("click", "span", function () {
+        $(this).siblings().css('background-color', '#ffffff');
+        $(this).css('background-color', '#3399ff');
+        $('.campus_city_detail').hide();
+        $('#campus_city_name').val($(this).text());
+
+    });
+
+
+    function search_school()//当输入学校时触发的查询
+    {
+        $('.search_school_info').empty();
+        $('.search_school_info').append('<span>查询出的学校</span>');
+    }
+
+    $('.school_detail2 p').click(function () {
+        $('#campus_school_name').val($(this).text());
+        $('.school_detail2').hide();
+    });
+    $("input").focus(function () {
+
+        $('.activity_remind').hide();
+    });
+    function city_next() {//点击下一步
+        var activity_theme = $("#activity_theme").val();
+        var activity_pro = $("#activity_pro").val();
+        var campus_city_name = $("#campus_city_name").val();
+        var activity_address = $("#activity_address").val();
+        var activity_start_date = $("#activity_start_date").val();
+        var activity_start_time = $("#activity_start_time").val();
+        var activity_end_date = $("#activity_end_date").val();
+        var activity_end_time = $("#activity_end_time ").val();
+        var sign_end_date = $("#sign_end_date").val();
+        var sign_end_time = $("#sign_end_time").val();
+        var campus_people_num = $("#campus_people_num").val();
+
+
+        if (activity_theme == '') {
+            $("#activity_theme").parent().parent().find('.activity_remind').show();
+        }
+        if (activity_pro == '' || campus_city_name == '' || activity_address == '') {
+            $('#activity_pro').parent().parent().parent().find('.activity_remind').show();
+        }
+        if (activity_start_date == '' || activity_start_time == '' || activity_end_date == '' || activity_end_time == '') {
+              $("#activity_start_date").parent().parent().parent().find('.activity_remind').show();
+        }
+        if (sign_end_date == '' || sign_end_time == '') {
+            $('.sign_end_time').show();
+        }
+        else {
+            window.location.href = 'upload_poster.html';
+        }
+    }
+    function campus_get_city(pro) {//根据省份查出学校
+        var content = '';
+        var array = getcity_by_pro(pro);
+        for (var i = 0; i < array.length; i++) {
+            content += '<span>' + array[i] + '</span>';
+        }
+        $(".campus_city_detail").empty();
+        $(".campus_city_detail").append(content);
+    }
+$(".activity_start_time_select div").click(function(){
+    $(this).css('background-color','blue');
+$("#activity_start_time").val($(this).text());
+$(this).parent().hide();
+});
+$(".activity_end_time_select div").click(function(){
+    $(this).css('background-color','blue');
+$("#activity_end_time").val($(this).text());
+$(this).parent().hide();
+});
+$(".sign_end_time_select div").click(function(){
+    $(this).css('background-color','blue');
+$("#sign_end_time").val($(this).text());
+$(this).parent().hide();
+});
+</script>

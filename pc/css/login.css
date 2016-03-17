@@ -1,0 +1,27 @@
+.lg-model-container{/*height:518px;*/background: #fff;width: 380px;margin: 100px auto;}
+.lg-model{display:none;position: fixed;top:0;left:0;right:0;bottom: 0;background: rgba(0,0,0,0.6);}
+.lg-model-title{text-align: center;height:60px;line-height: 60px;background: #3399FF;color:#fff;font-size: 20px;position: relative;}
+.lg-model-close{position: absolute;top:50%;margin-top:-9px;right:22px;}
+.lg-form{margin:12px auto;width:330px;padding-bottom: 20px;}
+.lg-form>input,.lg-code{margin-top:24px;}
+.lg-form .lg-check{display: inline-block;margin-top:12px;overflow: hidden;font-size: 14px;}
+.lg-form .lg-check input[type=checkbox]{vertical-align: bottom;margin-right:4px;width:16px;height:16px;outline:none;appearance: none;-webkit-appearance:none;-moz-appearance:none;background: url(../images/check.png) no-repeat center center;}
+.lg-form .lg-check input[type=checkbox]:checked{background: url(../images/checked.png) no-repeat center center;}
+.lg-form .lg-forget{float: right;color:#3399FF;margin-top: 12px;font-size: 14px;}
+.lg-form .lg-btn{color:#fff;width:100%;background: #3399FF;margin:12px 0;}
+.lg-error{background: #ffb2b2;text-align: center;padding: 4px 0;font-size: 14px;}
+.lg-form .lg-register{font-size: 14px;text-align: center;color:#999;}
+.lg-form .lg-register a{color: #3399FF;}
+.lg-form .lg-author-list a{display: inline-block;width:32%;text-align: center;}
+.lg-author-title{height: 1px;background-color: #999;position: relative;margin: 30px 0;}
+.lg-author{margin-top: 46px;}
+.lg-code{overflow: hidden;}
+.lg-code input{width:50%;float: left;}
+.lg-code a{display: inline-block;width:40%;border: 1px solid #999;float: right;height:40px;}
+.lg-code a img{width:134px;height: 40px;}
+.lg-author-title span{display: inline-block;position: absolute;padding: 0 10px;background-color: #fff;left: 116px;top: -10px;color: #999;font-size: 14px;}
+
+/*二维码*/
+.code-content{text-align: center;padding-top:32px;padding-bottom: 50px;position: relative;}
+.code-content h1{font-size:18px;font-weight: 400;margin-bottom: 12px;}
+.code-content img.code-close{position: absolute;right: 18px;top: 18px;}

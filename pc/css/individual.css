@@ -1,0 +1,27 @@
+.id-container{width:1000px;min-height: 526px;margin: 12px auto;background: #fff;border:1px solid #ccc;}
+.id-title{padding:20px 20px 26px 40px;font-size: 18px;border-bottom: 1px solid #ccc;}
+.id-container .id-body .id-form{padding:0 126px;}
+.id-form .id-form-list{font-size: 16px;}
+.id-form .id-form-list label{margin-right:50px;display: inline-block;width: 100px;text-align: right;}
+.id-form .id-form-list div.id-form-list-content{vertical-align: middle;color:#999;display: inline-block;width:570px;border-bottom: 1px solid #ccc;padding:26px 0;}
+.id-form .id-form-list div.id-form-list-content img.id-head-img{width:76px;height:76px;border-radius: 50%;}
+.id-form .id-form-list:last-child div.id-form-list-content{border-bottom: none;}
+.id-form .id-form-list div.id-form-list-content span{margin-right:40px;}
+/*组织列表*/
+.org-container{width:804px;margin:20px auto;}
+.org-container .org-content-list{margin-bottom: 10px;background: #fff;height: 106px;line-height: 106px;font-size: 16px;}
+.org-container .org-content-list>img{margin-left: 108px;width:66px;height: 66px;border-radius: 50%;vertical-align: middle;margin-right:60px;}
+.org-container .org-content-list-active>img{border:2px solid #3399FF;width:62px;height: 62px;}
+.org-content-list-active span{color:#3399FF;}
+.org-container .org-content-list label{width:126px;height:30px;line-height: 30px;text-align: center;color:#3399FF;font-size: 14px;border:1px solid #3399FF;display: none;}
+.org-container .org-content-list:hover label{display: inline-block;}
+.org-container .org-content-list:hover{background: #e6e9e9;}
+.org-container .org-content-list:hover.org-content-list-active{background: #fff;}
+.org-container .org-content-list:hover.org-content-list-active label{display: none;}
+.org-container .org-content-list>span{width:360px;display: inline-block;}
+.org-container .org-content-list-active{position:relative;}
+.org-container .org-content-list-active:after{position: absolute;content: "当前";background: #fdb100;color:#fff;width: 68px; height: 40px;text-align: center;line-height: 40px;left: 0;}
+.org-add-list{border:2px dashed #ccc;line-height:96px;height: 96px;font-size: 16px;}
+.org-add-list>img{margin-left: 108px;width:56px;height: 56px;border-radius: 50%;vertical-align: middle;margin-right:60px;}
+/*修改组织资料*/
+.id-form .id-form-list div.id-form-list-content span.org-zizh{border-radius:2px;line-height:28px;display: inline-block;width:120px;height:28px;margin-right:8px;text-align:center;color:#fff;background: #3399FF;}

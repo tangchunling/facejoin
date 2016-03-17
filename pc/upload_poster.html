@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善活动详情</title>
+    <script src='js/jquery-2.0.0.min.js'></script>
+    <script type="text/javascript" src="dist/js/wangEditor.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/wangEditor.min.css">
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/upload.css">
+
+</head>    
+<body>
+  <div class="upload_activity_content">
+        <div class="upload_activity_line">
+       <p class="upload_activity_line_text up_title_left">完善活动详情</p>
+    </div>
+        <div class="campus_content_main poster_main">
+            <div class="poster_img">
+                <div class="poster_upload_img">
+                    <p id='poster_upload'>
+                        上传活动海报
+                        <input type="file" id='poster_file'>
+                    </p>
+                    <span>建议海报尺寸：A4比例尺寸</span>
+                    <div class='poster_layer'>
+                        建议海报尺寸：50CM*70CM
+                    </div>
+                </div>
+                <p class='poster_no_poster'>没有海报？<span class='poster_blue_font' onclick='$(".poster_material").fadeIn();$(".layer").show();'>使用素材海报</span></p>
+            </div>
+            <div class="poster_info">
+                <div id="editor-trigger" class='editor-trigger'onkeydown="hide_placeholder()"></div>
+
+                <p class='editor-placeholder'>描写活动详情</p>
+                <div class='poster_next'>
+                    <span id='poster_remind'>请输入活动详情</span>
+                    <p>
+                    <a>上一步</a>
+                    <button class="btn" onclick='poster_next()'>下一步</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layer">
+        
+    </div>
+    <div class="poster_material">
+        <p class="material_title">选择素材<span onclick='$(".poster_material").hide();$(".layer").hide();'>×</span></p>
+        <div class="material_img"><img src="images/upload_activity/sucai.png" alt=""></div>
+        <button class="btn" onclick='material_selected()'>完成</button>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $("#poster_file").change(function () {
+        var src = $("#poster_file").val();
+         $(".poster_upload_img").find('img').remove();
+        $(".poster_upload_img").append('<img src="images/upload_activity/sucai.png" alt="">');//由于图片路径应由后台返回，故现在写死一个路径
+        $("#poster_upload").hide();
+    });
+
+    $(".poster_upload_img").on("mouseover", function () {
+
+        if ($(this).find('img').length != 0) {
+          
+            $(".poster_layer").show();
+            $("#poster_upload").show();
+        }
+    });
+
+    $(".poster_upload_img").on("mouseout", function () {
+        if ($(this).find('img').length != 0) {
+            $(".poster_layer").hide();
+            $("#poster_upload").hide();
+        }
+
+    });
+
+   var editor = new wangEditor('editor-trigger');//文本编辑框
+   editor.config.lang = wangEditor.langs['en'];
+            editor.create();
+
+$(".editor-trigger").click(function(){
+$(".editor-placeholder").hide();
+});
+function hide_placeholder(){
+$(".editor-placeholder").hide();
+}
+$(".editor-placeholder").click(function(){
+$(".editor-placeholder").hide();
+});
+    function poster_next() {//判断是否为空
+        var poster_info=$("#editor-trigger").text();
+        if (poster_info == '') {
+            $("#poster_remind").show();
+        }
+        else {
+            window.location.href = 'upload_form.html';
+        }
+    }
+function material_selected(){//选择素材
+var src=$(".poster_material").find('img').attr('src');
+$(".poster_upload_img").find('img').remove();
+$(".poster_upload_img").append('<img src='+src+' alt="">');
+        $("#poster_upload").hide();
+        $(".layer").hide();
+        $(".poster_material").hide();
+
+}
+</script>

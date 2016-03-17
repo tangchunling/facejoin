@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>设置报名内容页面</title>
+	<script src='js/jquery-2.0.0.min.js'></script>
+	<script src='js/ckeditor.js'></script>
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/upload.css">
+
+</head>
+<body>
+	<div class="upload_activity_content">
+		<div class="upload_activity_line">
+			<p class="upload_activity_line_text up_title_left"> 设置报名内容页面</p>
+		</div>
+		<div class="campus_content_main form_main">
+			<div class='form_base_info'>
+				<p class='form_title'><span style='color:#cc0000;'>*</span>&nbsp;基本信息</p>
+				<p class='form_base_kind'>
+					<span>姓名</span><span>手机号</span><span>性别</span><span>年级</span><span>专业</span>
+					<p class='form_base_remind'>
+						注：报名表单页里性别和年级为用户单选
+					</p>
+				</p>
+			</div>
+			<div class="form_single_question">
+				<p class='form_title'>单文本问题</p>
+				<div class="form_single_add">
+                    <!--  <p>
+                    <input type="text" class="form-controll form_out_input">
+                    <images src="images/upload_activity/trash.png" alt="">
+                    </p>
+                     <p>
+                     <input type="text" class="form-controll form_out_input">
+                     <images src="images/upload_activity/trash.png" alt="">
+                     </p> -->
+                     <span id='form_single_add'>点击添加问题</span>
+                 </div>
+             </div>
+             <div class="form_radio_question">
+             	<p class='form_title'>单选问题</p>
+             	<div class="form_single_add">
+                   <!-- <div>
+                        <input type="text" class="form-controll form_out_input" placeholder='输入你想提问的问题'>
+                        <img src="images/upload_activity/trash.png" alt="">
+                        <div>
+                            <p class='form_in_input_title'>选项1</p><input type="text" class="form-controll form_in_input">
+                            <p class='form_in_input_title'>选项2</p><input type="text" class="form-controll form_in_input">
+                        </div>
+                        <p class="form_in_input_add">添加选项</p>
+                    </div>-->
+                    <span id='form_radio_add'>点击添加问题</span>
+                </div>
+            </div>
+            <div class="form_button">
+            	<a href='upload_poster.html'>上一步</a>
+            	<a href='upload_finish.html'><button class="btn upload_form_btn">完成</button></a>
+            	<a>预览</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $("#form_single_add").click(function () {//添加单文本问题
+    	$(this).before('<p><input type="text" class="form-controll form_out_input"><img src="images/upload_activity/trash.png" alt="" class="form_del"></p>');
+    });
+
+    $('.form_single_question').on("click", ".form_del", function () {
+    	$(this).parent().remove();
+    });
+
+
+    $("#form_radio_add").click(function () {//添加单选问题
+    	$(this).before('<div class="form_out_input_warp"><input type="text" class="form-controll form_out_input" placeholder="输入你想提问的问题"><img src="images/upload_activity/trash.png" alt="" class="form_del"><div></div><p class="form_in_input_add">添加选项</p></div>');
+    });
+
+    $('.form_radio_question').on("click", ".form_del", function () {
+    	$(this).parent().remove();
+    });
+
+    $('.form_radio_question').on("click", ".form_in_input_add", function () {
+    	var length = $(this).parent().find(".form_in_input_title").length + 1;
+    	$(this).prev().append('<p class="form_in_input_title">选项&nbsp;' + length + '</p><input type="text" class="form-controll form_in_input">');
+    });
+
+    $(".form_base_kind span").click(function () {//选择基本信息
+    	if ($(this).attr('name') != 'selected') {
+
+    		$(this).css('border', '1px solid #3399ff');
+    		$(this).attr('name', 'selected');
+    	}
+    	else {
+
+    		$(this).css('border', '1px solid #cccccc');
+    		$(this).attr('name', 'normal');
+
+    	}
+    });
+</script>

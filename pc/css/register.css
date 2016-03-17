@@ -1,0 +1,49 @@
+﻿.rg-container{background: #f1f2f3;}
+.rg-content{height:526px;background: #fff;width:1000px;margin:0px auto;border-bottom: 1px solid #ccc;border-left: 1px solid #ccc;border-right: 1px solid #ccc;}
+.rg-content-title{height:48px;line-height: 48px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;}
+.rg-content-title ul{display: inline-block;margin: 0 97px;border-left: 1px solid #ccc;}
+.rg-content-title ul li{width:200px;float:left;text-align: center;border-right: 1px solid #ccc;color:#999;font-size: 16px;}
+.rg-content-title ul li span{margin-right:10px;display: inline-block;width:16px;height:16px;border-radius: 50%;border: 2px solid #ccc;vertical-align: sub;}
+.rg-content-title ul li.rg-active{background: #3399FF;color:#fff;}
+.rg-content-title ul li.rg-active span{border-color: #fff;}
+.rg-content-title ul li.rg-complete span{background: url(../images/2.png) no-repeat center center;background-size: 100%;border:none;width: 20px;height: 20px;color:#000;}
+.rg-content-title ul li.rg-complete{color:#000;font-weight: 600;}
+.rg-content-list h1{text-align: center;font-size: 20px;margin-top:48px;font-weight: 400;}
+.rg-content-list{display: none;}
+.rg-form{/*width:400px;*/margin-left:242px;}
+.rg-form .rg-form-list{overflow: hidden;margin-top: 24px;}
+.rg-content-list-active{display: block !important;}
+.rg-form .rg-form-list label{width:80px;text-align: right;display: inline-block;line-height: 42px;font-weight: 400;float:left;}
+.rg-form .rg-form-list input{width:300px;float:left;margin-left: 28px;}
+.rg-form .rg-form-list select{width:300px;display: inline-block;margin-left: 28px;appearance: none;-webkit-appearance:none;-moz-appearance:none;background: url(../images/drop-down.png) no-repeat 270px center;}
+.rg-form .rg-form-list textarea{width:300px;display: inline-block;margin-left: 28px;vertical-align: top;}
+.rg-form-check{margin:12px 0 0 110px;font-size:14px;}
+.rg-form-check input[type=checkbox]{vertical-align: bottom;margin-right:4px;width:16px;height:16px;outline:none;appearance: none;-webkit-appearance:none;-moz-appearance:none;background: url(../images/check.png) no-repeat center center;}
+.rg-form-check input[type=checkbox]:checked{background: url(../images/checked.png) no-repeat center center;}
+.rg-error-tip{color:#f80808;margin-left:16px;font-size: 14px;line-height: 42px;}
+.rg-next-btn{margin:22px 0 0 108px;}
+.rg-next-btn button{color:#fff;background: #3399FF;width:300px;}
+.rg-input-border{border-color: #F80808 !important;}
+.rg-form .rg-form-list input.rg-message-input{width: 150px;margin-right: 20px;height:42px;}
+.rg-form .rg-form-list button.rg-message-btn{width: 130px;height:42px;background: #fff;color: #3399ff;border: 1px solid #3399ff;}
+.rg-success img{width:30px;vertical-align: middle;margin-right:12px;}
+.rg-success{color:#53b85a;}
+.rg-success-body{padding-top:4px;padding-right: 10px;background: url(../images/rg.png) no-repeat;background-size: 100%;width:566px;height:254px;margin:30px auto;}
+.rg-organation{background: url(../images/title.png) no-repeat;background-size: 100%;width: 112px;height: 33px;color: #fff;line-height: 30px;text-align: center;margin-left: -10px;}
+.rg-col-2{width:150px;float: left;text-align: center;}
+.rg-col-8{width:380px;float:right;}
+.rg-col-2 .rg-head-img{width:138px;height:138px;border: 1px solid #ccc;margin-left: 20px;margin-top: 20px;margin-bottom: 10px;}
+.rg-col-2 .rg-head-img img{width: 138px;height: 138px;}
+.rg-col-2 label{color:#3399FF;}
+.rg-col-8 h1{margin-top: 20px; margin-bottom: 10px;}
+.rg-col-8 p{font-size: 14px;line-height: 20px;color:#999;}
+.rg-success-btn{text-align: center;}
+.rg-success-btn>button{width:300px;background: #3399FF;color:#fff;}
+.rg-upload{margin-top: 10px;display: block;color: #3399ff;}
+.rg-btn-disabled{background: #b5b5b5 !important;border-color: #B5B5B5 !important;color:#fff !important;}
+/*忘记密码*/
+.fg-title{font-size: 20px;margin-left: 30px;font-weight: 400;}
+.fg-form{margin-left: 76px;margin-top: 50px;}
+.fg-code{width: 130px;display: inline-block;height: 40px;vertical-align: bottom;border: 1px solid #ccc;}
+.fg-code img{width:100%;}
+.rg-zhuzhi-title{height:72px;line-height: 72px;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;}

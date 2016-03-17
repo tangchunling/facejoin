@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/common.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a class="logo"><img src="images/FaceJoin.png" alt="" /></a>
+				<ul>
+					<li class="active"><a href="">首页</a></li>
+					<li><a href="">上传活动</a></li>
+					<li><a href="">活动管理</a></li>
+					<li id="code"><a>我的二维码</a></li>
+				</ul>
+				<div class="login">
+					<a href="register.html">注册</a>
+					<a id="login">登录</a>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			
+		</div>
+		<div class="lg-model" id="login-model">
+			<div class="lg-model-container">
+				<div class="lg-model-title">
+					登录
+					<img class="lg-model-close" src="images/close.png" alt="" width="17" height="17"/>
+				</div>
+				<div class="lg-error">
+					账号或密码不正确
+				</div>
+				<div class="lg-model-body">
+					<div class="lg-form">
+						<input type="text" class="form-controll" placeholder="请输入手机号/邮箱"/>
+						<input type="password" class="form-controll" placeholder="请输入密码"/>
+						<div class="lg-code"><input type="text" class="form-controll" id="" value="" /><a href=""><img src="images/code.jpg"></a></div>
+						<div>
+							<div class="lg-check"><input type="checkbox" name="" id="" value="记住我" />记住我</div><a href="" class="lg-forget">忘记密码</a>
+						</div>
+						<button class="lg-btn btn">登录</button>
+						<div class="lg-register">
+							没有账号，<a href="">立即注册</a>
+						</div>
+						<div class="lg-author">
+							<div class="lg-author-title"><span>第三方登录</span></div>
+							<div class="lg-author-list">
+								<a href=""><img src="images/weibo.png" alt="" /></a>
+								<a href=""><img src="images/qq.png" alt="" /></a>
+								<a href=""><img src="images/weixin.png" alt="" /></a>
+								
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<div class="lg-model" id="code-model">
+			<div class="lg-model-container">
+				<div class="code-content">
+					<img src="images/code-close.png" alt="" class="code-close"/>
+					<h1>同学，扫码有惊喜！</h1>
+					<span>打开微信 扫扫下方二维码</span>
+					<img src="images/code-weixin.png" alt="" />
+					<p>或者搜索并关注微信公众号：<span style="color:#3399ff">facejoin</span></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src='js/jquery-2.0.0.min.js'></script>
+	<script type="text/javascript">
+		$("#login").click(function(){
+			$("#login-model").show();	
+		});
+		$(".lg-model-close").click(function(){
+			$("#login-model").hide();	
+		})
+		$(".code-close").click(function(){
+			$("#code-model").hide();	
+		})
+		$("#code").click(function(){
+			$("#code-model").show();	
+		});
+	</script>
+</html>

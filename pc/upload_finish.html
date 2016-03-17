@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布成功</title>
+    <script src='js/jquery-2.0.0.min.js'></script>
+    <script src='js/ckeditor.js'></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+    <div class="upload_activity_content finish_main">
+        <div class="upload_activity_line upload_finish_line">
+            <p class="upload_activity_line_text"><span>发布成功</span></p>
+        </div>
+        <div class="campus_content_main">
+            <div class="upload_finish_content">
+                <p class='finish_net'>报名页面网址</p>
+                <p class='finish_com'>http://www.hdb.com/post/party?id=vds0u</p>
+                <p class="finish_tips">您可复制该网址绑定至微信公众号的自定义菜单中</p>
+                <p class="finish_code"><span>活动二维码</span>您可下载此二维码用于线上线下推广</p>
+                <div class="finish_code_show">
+
+                    <img src="images/upload_activity/code.png" alt="" class="finisn_code_img">
+                    <div class='finish_size'>
+                        <p style='color:black;margin-bottom:10px;'>下载尺寸</p>
+                       
+                        <span><span>128*128</span>&nbsp;|&nbsp;<span>500*500</span>&nbsp;|&nbsp;<span>800*800</span></span>
+                    </div>
+                </div>
+                <span class='finish_copy'>点击复制</span>
+            </div>
+            <p class='finish_share'>
+                <span style='left:0px;'>分享到：</span>
+                <img src="images/upload_activity/weibo_share.png" alt="">
+                <img src="images/upload_activity/wechat_share.png" alt="">
+                <img src="images/upload_activity/QQ_share.png" alt="">
+                <a>进入活动管理页面</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+
+    $("#form_single_add").click(function () {//添加单文本问题
+        $(this).before('<p><input type="text" class="form-controll form_out_input"><img src="images/upload_activity/trash.png" alt="" class="form_del"></p>');
+    });
+
+    $('.form_single_question').on("click", ".form_del", function () {
+        $(this).parent().remove();
+    });
+
+
+    $("#form_radio_add").click(function () {//添加单选问题
+        $(this).before('<div><input type="text" class="form-controll form_out_input" placeholder="输入你想提问的问题"><img src="images/upload_activity/trash.png" alt="" class="form_del"><div><p class="form_in_input_title">选项1</p><input type="text" class="form-controll form_in_input"><p class="form_in_input_title">选项2</p><input type="text" class="form-controll form_in_input"></div><p class="form_in_input_add">添加选项</p></div>');
+    });
+
+    $('.form_radio_question').on("click", ".form_del", function () {
+        $(this).parent().remove();
+    });
+
+    $('.form_radio_question').on("click", ".form_in_input_add", function () {
+        var length = $(this).parent().find(".form_in_input_title").length + 1;
+        $(this).prev().append('<p class="form_in_input_title">选项' + length + '</p><input type="text" class="form-controll form_in_input">');
+    });
+
+    $(".form_base_kind span").click(function () {//选择基本信息
+        if ($(this).attr('name') != 'selected') {
+
+            $(this).css('border', '1px solid #3399ff');
+            $(this).attr('name', 'selected');
+        }
+        else {
+
+            $(this).css('border', '1px solid #cccccc');
+            $(this).attr('name', 'normal');
+
+        }
+    });
+
+</script>

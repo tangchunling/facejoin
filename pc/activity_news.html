@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/activity.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a class="logo"><img src="images/FaceJoin.png" alt="" /></a>
+				<ul>
+					<li ><a href="">首页</a></li>
+					<li><a href="">上传活动</a></li>
+					<li class="active"><a href="">活动管理</a></li>
+					<li><a href="">我的二维码</a></li>
+				</ul>
+				<div class="headImg" style="display: inline-block;"><img src="images/head.jpg" alt="" />
+					<div class="navList">
+						<ul>
+							<li><a href=""><img src="images/personal/iconfont-qunfengzhanghaoshezhi.png" alt="" class="nav-img-show"/><img src="images/personal/iconfont-qunfengzhanghaoshezh2i.png" alt=""/>我的组织</a></li>
+							<li><a href=""><img src="images/personal/iconfont-p-set.png" alt="" class="nav-img-show"/><img src="images/personal/iconfont-p-set1.png" alt=""/>账号设置</a></li>
+							<li><a href=""><img src="images/personal/iconfont-tuichuzhanghao.png" alt="" class="nav-img-show"/><img src="images/personal/tuichu.png" alt=""/>退出账号</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="im-container">
+				<div class="im-title">
+					<h1><span>校园活动</span>|<span>冬日也要美美哒——约会必备十大单品【第十二期专题活动】</span><img src="images/activity/progressive.png" alt="" class="im-tag-img"/>
+						<div class="im-share"><img src="images/activity/weibo.png" alt="" /><img src="images/activity/qq.png" alt="" /><img src="images/activity/weixin.png" alt="" /></div>
+					</h1>
+					<div class="im-nav">
+						<ul>
+							<li class="im-nav-active"><a href="">活动信息</a></li>
+							<li ><a href="">报名用户</a></li>
+							<li><a href="">推广素材</a></li>
+						</ul>
+					</div>
+					<div class="ac-signup-sum">
+						<div>
+							报名人数
+							<span>109</span>
+						</div>
+						
+					</div>
+				</div>
+				<div class="im-body">
+					<div class="new-container">
+						<div class="new-left">
+							<img src="images/2.jpg" alt="" />
+							<div class="new-list-sum">
+								<a><span>109000</span><label for=""></label>报名人数</a>
+								<a><span>109</span><label for=""></label>阅读量</a>
+								<a><span>109</span><label for=""></label>分享数</a>
+							</div>
+						</div>
+						<div class="new-right">
+							<div class="new-right-content">
+								<h1><a href=""><span>校园活动</span><label for="">|</label><span>冬日也要美美哒——约会必备十大单品【第十二期专题活动】</span></a></h1>
+									<div class="new-item-content">
+										<div class="new-item">
+											<label for="">活动时间：</label><span>2015月3日 18:00 - 2016年4月 18:00</span>	
+										</div>
+										<div class="new-item">
+											<label for="">报名截止：</label><span>2016年3月</span>
+										</div>
+										<div class="new-item">
+											<label for="">活动地点：</label><span>湖北省武汉市中南财经大学逸夫楼</span>
+										</div>
+										<div class="new-item">
+											<label for="">活动人数：</label><span>300</span>
+										</div>
+									</div>
+								<div class="new-describle">
+									<p>春节假期的夜晚，市中心的酒吧一条街繁华喧嚣，香港影明星吾先生（刘德华 饰）走出酒吧就被冒充警察的张华（王千源 饰）一伙人持枪绑架到一个与世隔绝的郊外的小院。吾先生意外发现绑匪还绑架了另外一个人质小窦（蔡鹭 饰）经过与张华的谈判，吾先生将小窦从死亡线拉回。两人开始了争取生机并相依为。</p>
+									<p>影片改编自2004年的“吴若甫绑架案”单独出门与吾先生的好友（林雪 饰）交收赎款。但是他在取得赎际一伙人持枪绑架到一个与世隔绝的郊外的小院。吾先生意外发现绑匪还绑吾先生将小 饰经过与张华的谈判，吾先生将小窦从死亡线拉回。两人开始了争取生机并相依为4年的“吴若甫绑架案”单独出门与吾先生的好友（林雪 饰）交收赎）小 交交窦从死亡线拉回世隔绝的郊外的小院。吾先生意外发现绑匪外发现绑匪还绑吾先生将。吾先生的生的好友</p>
+									<span class="new-out" id="newOut">展开</span>
+								</div>
+								<button class="btn new-btn-edit">编辑信息</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer>
+			<p><a href="">关于我们</a>|<a href="">广告合作</a>|<a href="">联系我们</a>|<a href="">招聘英才</a></a></p>
+			<p>Copyright © 2016 - 2021 FaceJoin. All Rights Reserved. 蛋疼科技 版权所有</p>
+		</footer>
+	</body>
+	<script src='js/jquery-2.0.0.min.js'></script>
+	<script src='js/foot.js'></script>
+	<script src='js/head.js'></script>
+	<script>
+		$(document).ready(function(){
+			$("#newOut").click(function(){
+				if($(".new-describle").height()==124){
+					$(".new-describle").css("height","auto");
+					$(this).html("隐藏");
+				}
+				else{
+					$(".new-describle").css("height","124px");
+					$(this).html("展开");
+				}	
+			});
+		});
+	</script>
+</html>

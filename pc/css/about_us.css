@@ -1,0 +1,184 @@
+﻿@font-face {
+	font-family: qianduanNet;
+	font-style:  normal;
+    
+	src: url("../font/lth.TTF");
+}
+@font-face {
+	font-family: ltj;
+	font-style:  normal;
+ 
+	src: url("../font/FZLTTHJW.TTF");
+}
+.about_us {
+font-family: lth;
+	width: 920px;
+	padding: 10px 40px;
+	margin: auto;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 2px #cccccc;
+	margin-bottom: 15px;
+        color: rgb(51,51,51);
+}
+
+.about_us_nav {
+	color: #666666;
+	margin-bottom: 40px;
+}
+
+.about_us_nav a {
+	margin-right: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	height: 100%;
+	display: inline-block;
+	width: 80px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.about_us_nav a：hover {
+	color: #000000;
+}
+
+.now_href {
+	color: #333333;
+	border-bottom: 2px solid  #3399ff;
+}
+
+.b_font {
+	color: #3399ff;
+	font-size: 28px;	
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cccccc;
+	height: 28px;
+	line-height: 28px;
+        font-family:ltj;
+}
+
+.about_us_article {
+	position: relative;
+	margin-top: 36px;
+	margin-bottom: 72px;
+}
+
+.about_us_logo {
+	width: 226px;
+	height: 66px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background-color: #3399ff;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.team_user_info {
+	margin: 28px 0px;
+	overflow: hidden;
+	color: rgb(102,102,102);
+}
+
+.team_user_info figure {
+	width: 230px;
+	text-align: center;
+	float: left;
+	vertical-align: top;
+}
+
+.team_user_info figure img {
+	width: 102px;
+	height: 102px;
+	border-radius: 51px;
+	margin-bottom: 24px;
+}
+
+.team_user_info figcaption span {
+	font-size: 16px;
+}
+.team_user_info figcaption p{
+	margin-top: 12px;
+}
+.talented_article {
+	margin-top: 30px;
+}
+
+.talented_article hr {
+	width: 520px;
+	margin-top: 39px;
+	border: 1px solid #cccccc;
+	border-top: none;
+}
+
+.work_kind {
+	color: #333333;
+	font-size: 18px;
+	
+	margin-top: 0px;
+	margin-bottom: 24px;
+        font-family: ltj;
+}
+
+.work_content {
+	font-size: 16px;
+	color: #333333;
+	
+	margin-bottom: 20px;
+        font-family: ltj;
+}
+
+.work_require {
+	font-size: 16px;
+	color: #333333;
+	font-family: ltj;
+	margin-bottom: 24px;
+	margin-top: 20px;
+}
+
+.cooperation_article {
+	position: relative;
+	margin: 30px 0px;
+}
+
+.ab_article_out {
+	margin-bottom: 30px;
+}
+
+.ab_article_in {
+	margin-top: 16px;
+}
+
+.ab_article_center {
+	margin-bottom: 20px;
+}
+
+.ab_article_big {
+	margin-bottom: 36px;
+}
+
+.contact_us_logo {
+	position: absolute;
+	right: 50px;
+	top: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.contact_us_logo img {
+	height: 168px;
+	width: 168px;
+	margin-bottom: 10px;
+}
+
+.b_font_right {
+	float: right;
+	font-size: 14px;
+	margin-top: 10px;
+	font-weight: normal;
+font-family:lth;
+}
+
+
+
+
