@@ -28,33 +28,31 @@
 			</nav>
 		</header>
 		<div class="container">
-			<div class="org-container">
-				<div class="org-content-list org-content-list-active">
-					<img src="../images/head.jpg" alt="" />
-					<span>武汉大学学生会</span>
-					<label for="">切换到当前组织</label>
-				</div>
-				<div class="org-content-list">
-					<img src="../images/head.jpg" alt="" />
-					<span>武汉大学学生会</span>
-					<label for="">切换到当前组织</label>
-				</div>
-				<div class="org-add-list" id="orgAdd">
-					<img src="../images/personal/iconfont-iconfonttianjia.png" alt="" />
-					<span>添加组织</span>
-				</div>
-			</div>
-		</div>
-		<div class="id-mask" id="idZuzhi">
-			<div class="id-mask-content">
-				<div class="id-mask-container">
-					<div class="id-mask-title">添加说明<img src="../images/code-close.png" alt="" id="close"/></div>
+			<div class="set-container">
+				<div class="set-title">
 					<ul>
-						<li><label for="">一、</label><span>一个账号最多创建4个组织</span></li>
-						<li><label for="">二、</label><span>各组织信息互相独立</span></li>
-						<li><label for="">三、</label><span>组织添加后不可删除，请慎重添加</span></li>
+						<li class="set-nav-active"><a href="">账号绑定</a></li>
+						<li><a href="">修改密码</a></li>
 					</ul>
-					<button class="btn" id="idZuzhiK">知道了</button>
+				</div>
+				<div class="set-body">
+					<div class="set-body-title">
+						更改手机
+					</div>
+					<div class="set-body-form">
+						<div class="set-form-list set-message">
+							<label for="">短信验证</label>
+							<input type="" name="" id="" value="" placeholder="请输入验证码" class="form-controll"/>
+							<button class="btn-null" id="set-send">重新发送</button>
+						</div>
+						
+						<p class="set-form-tip"></p>
+					
+						<div class="set-form-list">
+							<label for=""></label>
+							<button class="btn set-btn-next">下一步</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -63,14 +61,29 @@
 	<script src='../js/foot.js'></script>
 	<script src='../js/head.js'></script>
 	<script type="text/javascript">
-		$("#orgAdd").click(function(){
-			$("#idZuzhi").show();
-		})
-		$("#close").click(function(){
-			$("#idZuzhi").hide();
-		})
-		$("#idZuzhiK").click(function(){
-			$("#idZuzhi").hide();
+		/*倒计时60秒*/
+		var wait=60;
+		function time(o) {
+		        if (wait == 0) {
+		        	o.removeClass("set-btn-disabled");
+		            o.attr("disabled",false);           
+		            o.html("发送短信");
+		            wait = 60;
+		        } else {
+		            o.attr("disabled", true);
+		            o.html("已发送" + wait + "秒");
+		        
+		            wait--;
+		            setTimeout(function() {
+		                time(o)
+		            },
+		            1000)
+		        }
+		    }
+		$("#set-send").click(function(){
+			$("#set-send").addClass("set-btn-disabled");
+			time($("#set-send"));
+			$(".set-form-tip").html("验证码已发送到 15857129915");
 		})
 	</script>
 </html>

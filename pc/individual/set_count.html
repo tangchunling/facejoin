@@ -28,33 +28,26 @@
 			</nav>
 		</header>
 		<div class="container">
-			<div class="org-container">
-				<div class="org-content-list org-content-list-active">
-					<img src="../images/head.jpg" alt="" />
-					<span>武汉大学学生会</span>
-					<label for="">切换到当前组织</label>
-				</div>
-				<div class="org-content-list">
-					<img src="../images/head.jpg" alt="" />
-					<span>武汉大学学生会</span>
-					<label for="">切换到当前组织</label>
-				</div>
-				<div class="org-add-list" id="orgAdd">
-					<img src="../images/personal/iconfont-iconfonttianjia.png" alt="" />
-					<span>添加组织</span>
-				</div>
-			</div>
-		</div>
-		<div class="id-mask" id="idZuzhi">
-			<div class="id-mask-content">
-				<div class="id-mask-container">
-					<div class="id-mask-title">添加说明<img src="../images/code-close.png" alt="" id="close"/></div>
+			<div class="set-container">
+				<div class="set-title">
 					<ul>
-						<li><label for="">一、</label><span>一个账号最多创建4个组织</span></li>
-						<li><label for="">二、</label><span>各组织信息互相独立</span></li>
-						<li><label for="">三、</label><span>组织添加后不可删除，请慎重添加</span></li>
+						<li class="set-nav-active"><a href="">账号绑定</a></li>
+						<li><a href="">修改密码</a></li>
 					</ul>
-					<button class="btn" id="idZuzhiK">知道了</button>
+				</div>
+				<div class="set-body">
+					<div class="set-count-list">
+						<img src="../images/personal/tel.png" alt="" /><span>当前手机号 15857129915</span>
+						<div class="set-count-right"><span></span><label for="">更改绑定</label></div>
+					</div>
+					<div class="set-count-list">
+						<img src="../images/personal/email.png" alt="" /><span>你还未绑定邮箱</span>
+						<div class="set-count-right"><span></span><label for="">更改绑定</label></div>
+					</div>
+					<div class="set-count-list">
+						<img src="../images/personal/other.png" alt="" /><span>你还未绑定银行卡</span>
+						<div class="set-count-right"><span>（备注：暂无，后期参考）</span><label for="">更改绑定</label></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -62,15 +55,4 @@
 	<script src='../js/jquery-2.0.0.min.js'></script>
 	<script src='../js/foot.js'></script>
 	<script src='../js/head.js'></script>
-	<script type="text/javascript">
-		$("#orgAdd").click(function(){
-			$("#idZuzhi").show();
-		})
-		$("#close").click(function(){
-			$("#idZuzhi").hide();
-		})
-		$("#idZuzhiK").click(function(){
-			$("#idZuzhi").hide();
-		})
-	</script>
 </html>

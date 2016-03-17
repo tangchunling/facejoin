@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/individual.css" />
+		<link rel="stylesheet" href="../css/upload.css" />
+		
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a class="logo"><img src="../images/FaceJoin.png" alt="" /></a>
+				<ul>
+					<li ><a href="">首页</a></li>
+					<li><a href="">上传活动</a></li>
+					<li class="active"><a href="">活动管理</a></li>
+					<li><a href="">我的二维码</a></li>
+				</ul>
+				<div class="headImg" style="display: inline-block;"><img src="../images/head.jpg" alt="" />
+					<div class="navList">
+						<ul>
+							<li><a href=""><img src="../images/personal/iconfont-qunfengzhanghaoshezhi.png" alt="" class="nav-img-show"/><img src="../images/personal/iconfont-qunfengzhanghaoshezh2i.png" alt=""/>我的组织</a></li>
+							<li><a href=""><img src="../images/personal/iconfont-p-set.png" alt="" class="nav-img-show"/><img src="../images/personal/iconfont-p-set1.png" alt=""/>账号设置</a></li>
+							<li><a href=""><img src="../images/personal/iconfont-tuichuzhanghao.png" alt="" class="nav-img-show"/><img src="../images/personal/tuichu.png" alt=""/>退出账号</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="id-container">
+				<div class="id-title">
+					<img src="../images/personal/arrow.png" alt="" class="id-arrow"/><span>组织资料</span>
+				</div>
+				<div class="id-body">
+					<div class="id-form">
+						<div class="id-form-list">
+							<label for="">我的头像</label>
+							<div class="id-form-list-content md-input"><span class="id-head-img-modify"><img src="../images/head.jpg" alt="" class="id-head-img"/><label for="">修改头像</label></span></div>
+						</div>
+						<div class="id-form-list">
+							<label for="">组织名称</label>
+							<div class="id-form-list-content md-input"><input type="text" class="form-controll" value="武汉大学学生会"/></div>
+						</div>
+						<div class="id-form-list">
+							<label for="">所在地区</label>
+							<div class="id-form-list-content md-input md-input-city">
+								 <div class="campus_text">
+				                    <div class="campus_checkbox campus_pointer campus_pro id-province" onclick='show_pro()' style="width:228px;">
+				                        <input type="text" placeholder='选择省份' readonly="readonly" id="activity_pro" value="湖北">
+				                        <div class="pro_detail">
+				                            <span>北京</span><span>上海</span><span>天津</span><span>重庆</span><span>河北</span><span>山西</span>
+				                            <span>河南</span><span>辽宁</span><span>吉林</span><span>黑龙江</span><span>内蒙古</span><span>江苏</span>
+				                            <span>山东</span><span>安徽</span><span>浙江</span><span>福建</span><span>湖北</span><span>湖南</span>
+				                            <span>广东</span><span>广西</span><span>江西</span><span>四川</span><span>海南</span><span>贵州</span>
+				                            <span>云南</span><span>西藏</span><span>陕西</span><span>甘肃</span><span>青海</span><span>宁夏</span>
+				                            <span>新疆</span><span>台湾</span><span>香港</span><span>澳门</span>
+				                        </div>
+				                    </div>
+				                    <div class="campus_checkbox campus_pointer campus_city id-province" onclick='show_school()' style="width:228px;">
+				                        <input type="text" placeholder='选择城市' id='campus_city_name' value="武汉">
+				                    </div>
+				                    <div class="school_detail campus_city_detail id-province" style="left:270px;">
+				                    </div>
+				                   
+				                </div>
+							</div>
+						</div>
+						<div class="id-form-list">
+							<label for="">组织简介</label>
+							<div class="id-form-list-content md-input"><textarea class="form-controll" style="width:510px;">武汉大学学生会是在中国共产党领导下的全体在校的全日制的本科生的专科生和专科生群众性组织</textarea></div>
+						</div>
+						<div class="id-form-list">
+							<label for="">组织子账号</label>
+							<div class="id-form-list-content md-input" style="border-bottom: none;">
+								<span class="org-zizh">facejoin007<img src="../images/personal/mdClose.png"/></span>
+								<span class="org-zizh">facejoin007<img src="../images/personal/mdClose.png"/></span>
+								<a class="md-add-zh" id="mdaddzh">添加新子账号</a></div>
+						</div>
+						<div class="id-form-list">
+							<label for=""></label>
+							<div class="id-form-list-content">
+								<div class="id-form-btn">
+									<button id="modify" class="btn" style="margin-right:20px;">保存</button>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="id-mask" id="idzzhAdd">
+			<div class="id-mask-content">
+				<div class="id-mask-container">
+					<div class="id-mask-title">添加说明<img src="../images/code-close.png" alt="" id="close"/></div>
+					<ul>
+						<li><label for="">一、</label><span>子账号仅用于管理当前组织</span></li>
+						<li><label for="">二、</label><span>一个组织最多创建三个子账号，可以删除</span></li>
+						<li><label for="">三、</label><span>请妥善保存子账号密码</span></li>
+					</ul>
+					<button class="btn" id="idZuzhiK">知道了</button>
+				</div>
+			</div>
+		</div>
+		<div class="id-mask" id="mdAddform">
+			<div class="md-mask-container">
+				<div class="md-mask-title">
+					子账号设置<img src="../images/close.png" alt="" id="close1"/>
+				</div>
+				<div class="md-mask-body">
+					<input type="text" placeholder="请输入子账号" class="form-controll"/>
+					<input type="password" placeholder="请输入密码" class="form-controll"/>
+					<input type="password" placeholder="请确认密码" class="form-controll"/>
+					<button class="btn">完成</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src='../js/jquery-2.0.0.min.js'></script>
+	<script src='../js/foot.js'></script>
+	<script src='../js/head.js'></script>
+    <script type="text/javascript" language="javascript" src="../js/eye-base.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/eye-all.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/get_activity_info.js"></script>
+    <script type="text/javascript">
+		$("#mdaddzh").click(function(){
+			$("#idzzhAdd").show();
+		})
+		$("#close,#close1").click(function(){
+			$(".id-mask").hide();
+		})
+		$("#idZuzhiK").click(function(){
+			$("#idzzhAdd").hide();
+			$("#mdAddform").show();
+		})
+	</script>
+	<script>
+	    function show_pro() {//省份的显示
+        $('.school_detail').hide();
+        $('.campus_pro .pro_detail').toggle();
+    }
+    function show_school() {//学校的显示
+        $('.campus_pro .pro_detail').hide();
+        $('.school_detail').toggle();
+        var pro = $("#activity_pro").val();
+        campus_get_city(pro);
+    }
+
+    $(".campus_pro .pro_detail span").click(function () {
+        $(this).siblings().css('background-color', '#ffffff');
+        $(this).css('background-color', '#3399ff');
+
+        $(this).parent().prev().val($(this).text());
+
+
+
+    });
+
+    $(".campus_city_detail").on("click", "span", function () {
+        $(this).siblings().css('background-color', '#ffffff');
+        $(this).css('background-color', '#3399ff');
+        $('.campus_city_detail').hide();
+        $('#campus_city_name').val($(this).text());
+
+    });
+
+
+    function search_school()//当输入学校时触发的查询
+    {
+        $('.search_school_info').empty();
+        $('.search_school_info').append('<span>查询出的学校</span>');
+    }
+
+    $('.school_detail2 p').click(function () {
+        $('#campus_school_name').val($(this).text());
+        $('.school_detail2').hide();
+    });
+    $("input").focus(function () {
+
+        $('.activity_remind').hide();
+    });
+    function city_next() {//点击下一步
+        var activity_theme = $("#activity_theme").val();
+        var activity_pro = $("#activity_pro").val();
+        var campus_city_name = $("#campus_city_name").val();
+        var activity_address = $("#activity_address").val();
+        var activity_start_date = $("#activity_start_date").val();
+        var activity_start_time = $("#activity_start_time").val();
+        var activity_end_date = $("#activity_end_date").val();
+        var activity_end_time = $("#activity_end_time ").val();
+        var sign_end_date = $("#sign_end_date").val();
+        var sign_end_time = $("#sign_end_time").val();
+        var campus_people_num = $("#campus_people_num").val();
+
+
+        if (activity_theme == '') {
+            $("#activity_theme").parent().parent().find('.activity_remind').show();
+        }
+        if (activity_pro == '' || campus_city_name == '' || activity_address == '') {
+            $('#activity_pro').parent().parent().parent().find('.activity_remind').show();
+        }
+        if (activity_start_date == '' || activity_start_time == '' || activity_end_date == '' || activity_end_time == '') {
+              $("#activity_start_date").parent().parent().parent().find('.activity_remind').show();
+        }
+        if (sign_end_date == '' || sign_end_time == '') {
+            $('.sign_end_time').show();
+        }
+        else {
+            window.location.href = 'upload_poster.html';
+        }
+    }
+    function campus_get_city(pro) {//根据省份查出学校
+        var content = '';
+        var array = getcity_by_pro(pro);
+        for (var i = 0; i < array.length; i++) {
+            content += '<span>' + array[i] + '</span>';
+        }
+        $(".campus_city_detail").empty();
+        $(".campus_city_detail").append(content);
+    }
+		
+	</script>
+</html>

@@ -55,6 +55,32 @@ font-family: "微软雅黑";
   border: 1px solid transparent;
   border-radius: 2px;
   font-family: "微软雅黑";
+  color:#fff;background: #3399FF;
+  }
+  .btn-null{
+  	outline: none;
+  	display: inline-block;
+  padding: 10px 12px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid #3399FF;
+  border-radius: 2px;
+  font-family: "微软雅黑";
+  color:#3399FF;
+  background: #fff;
   }
   footer{overflow: hidden;margin-top: 30px;/*position: absolute;width: 100%;bottom: 0;*/padding:36px 0;}
   .footer-active{position: absolute;width: 100%;bottom: 0;}
