@@ -36,21 +36,18 @@
 					</ul>
 				</div>
 				<div class="set-body">
-					<div class="set-body-title">
-						更改手机
-					</div>
-					<div class="set-body-form">
-						<div class="set-form-list set-message">
-							<label for="">短信验证</label>
-							<input type="" name="" id="" value="" placeholder="请输入验证码" class="form-controll"/>
-							<button class="btn-null" id="set-send">重新发送</button>
-						</div>
-						
-						<p class="set-form-tip"></p>
-					
-						<div class="set-form-list">
-							<label for=""></label>
-							<button class="btn set-btn-next">下一步</button>
+					<div class="set-email-content">
+						<img src="../images/personal/email2.png" alt="" />
+						<h1>请前往邮箱验证</h1>
+						<p>验证邮件已发送到163.com</p>
+						<button class="btn-null">我已确认邮件</button>
+						<div>
+							<span>还没收到验证邮件</span>
+							<ul>
+								<li>1、尝试到广告邮件、垃圾邮件目录里找找看</li>
+								<li>2、<a href="">再次发送验证邮件</a></li>
+								<li>3、如果重发注册验证邮件仍然没有收到，请更换<a href="">另一个邮件地址</a></li>
+							</ul>
 						</div>
 					</div>
 					
@@ -61,31 +58,5 @@
 	<script src='../js/jquery-2.0.0.min.js'></script>
 	<script src='../js/foot.js'></script>
 	<script src='../js/head.js'></script>
-	<script type="text/javascript">
-		/*倒计时60秒*/
-		var wait=60;
-		function time(o) {
-		        if (wait == 0) {
-		        	o.removeClass("set-btn-disabled");
-		            o.attr("disabled",false);           
-		            o.html("发送短信");
-		            wait = 60;
-		        } else {
-		            o.attr("disabled", true);
-		            o.html("已发送" + wait + "秒");
-		        
-		            wait--;
-		            setTimeout(function() {
-		                time(o)
-		            },
-		            1000)
-		        }
-		    }
-		$("#set-send").click(function(){
-			$("#set-send").addClass("set-btn-disabled");
-			time($("#set-send"));
-			$(".set-form-tip").html("验证码已发送到 15857129915");
-			$(".set-form-tip").show();
-		})
-	</script>
+	
 </html>

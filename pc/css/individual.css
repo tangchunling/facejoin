@@ -68,10 +68,24 @@
 /*更换手机*/
 .set-body .set-body-title{padding:20px 0;border-bottom: 1px solid #ccc;font-size: 18px;margin-top:-40px;}
 .set-body .set-body-form{width:600px;margin:26px auto;}
-.set-body .set-body-form .set-form-list{overflow: hidden;}
+.set-body .set-body-form .set-form-list{overflow: hidden;margin-bottom: 30px;}
 .set-body .set-body-form .set-form-list label{height:44px;line-height:44px;float:left;display: inline-block;width:100px;margin-right:20px;text-align: right;}
 .set-body .set-body-form .set-message input{margin-right:20px;width:324px;height:44px;float:left;}
 .set-body .set-body-form .set-message button{width:112px;height:44px;display: inline-block;float: left;}
 .set-body .set-body-form .set-form-list button.set-btn-next{width:324px;margin-top:38px;}
-.set-body .set-body-form p.set-form-tip{height:20px;color: #999;margin-top: 16px;margin-left: 118px;}
+.set-body .set-body-form p.set-form-tip{display:none;height:20px;color: #999;margin-top: -14px;margin-left: 118px;}
 .set-body .set-body-form .set-message button.set-btn-disabled{border-color: #999;color:#999;}
+.set-email-content>h1{font-size: 18px;font-weight: 400;margin-bottom: 10px;}
+.set-email-content>p{color:#999;margin-bottom: 26px;}
+.set-email-content>button{width:324px;padding:6px 12px;margin-bottom: 44px;}
+.set-email-content ul>li{padding:5px 0;color:#999;}
+.set-email-content ul>li>a{color:#3399FF;}
+.set-email-content>div>span{color:#000;font-size: 16px;margin-bottom: 10px;display: inline-block;}
+.set-email-content>div{padding:44px 0;border-top: 1px solid #ccc;}
+.set-email-content{width:400px;margin: auto;position: relative;}
+.set-email-content>img{position: absolute; left: -110px;top: 10px;}
+.set-email-complete{text-align: center;padding: 118px 0;}
+.set-email-complete h1{font-weight: 400;font-size: 22px;color:#3399FF;}
+.set-email-complete h1 img{vertical-align: middle;margin-right:20px;}
+.set-email-complete button{padding: 6px 12px;width:324px;margin-top:60px;}
+.set-find{text-align: right; color: #3399ff; padding-right: 150px; margin-top: -20px; margin-bottom: 40px;}
