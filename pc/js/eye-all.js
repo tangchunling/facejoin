@@ -281,14 +281,14 @@ eye.datePicker = function() {
             var oldDiv = document.getElementById(this.oGuid);
 
             if (oldDiv != null && oldDiv != undefined) {
-                oldDiv.style.top = this.oPosition.Y + 'px';
+                oldDiv.style.top = this.oPosition.Y +3+ 'px';
                 oldDiv.style.left = this.oPosition.X + 'px';
                 oldDiv.style.zIndex = (eye.zIndex += 1);
             }
             else {
                 var newDiv = document.createElement('div');
                 newDiv.id = this.oGuid;
-                newDiv.style.top = this.oPosition.Y + 'px';
+                newDiv.style.top = this.oPosition.Y +3+ 'px';
                 newDiv.style.left = this.oPosition.X + 'px';
                 newDiv.style.position = 'absolute';
                 newDiv.style.zIndex = (eye.zIndex += 1);

@@ -569,7 +569,9 @@
 	outline: none;
 	font-family: "微软雅黑";
 }
-
+#campus_search_condition{
+        font-family: "微软雅黑";
+}
 .campus_time {
 	margin-right: 12px;
 	width: 26px;
@@ -588,7 +590,11 @@
 	background-image: url(../images/upload_activity/Calendar.png);
 	background-position: 95% 50%;
 	background-repeat: no-repeat;
-	width: 100%;
+	width: 93%;
+        position:absolute;
+        left:0px;
+        padding-left:10px;
+        
 }
 
 .campus_minute {

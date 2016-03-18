@@ -21,10 +21,10 @@
 /*活动列表*/
 .ac-list{width:90%;margin:0 auto;padding:24px 0;border-bottom: 1px solid #ccc;overflow: hidden;}
 .ac-list:last-child{border-bottom: none;}
-.ac-list-left{width:158px;height:216px;overflow: hidden;float: left;border: 1px solid #ccc;position:relative;padding:6px;}
-.ac-list-left a img{width:158px;height:216px;}
+.ac-list-left{width:112px;height:168px;overflow: hidden;float: left;border: 1px solid #ccc;position:relative;padding:6px;}
+.ac-list-left a img{width:112px;height:168px;}
 .ac-list-left span.ac-list-tag{position: absolute;top:6px;z-index: 222;left:0;display: inline-block;}
-.ac-list-right{margin-left: 164px; padding-left: 32px;}
+.ac-list-right{margin-left: 120px; padding-left: 32px;}
 .ac-list-right h1{font-size: 18px;margin-bottom: 12px;}
 .ac-list-right p>span.ac-list-time{margin-right:20px;}
 .ac-list-right p{font-size: 16px;color:#333;}
@@ -36,14 +36,14 @@
 .ac-list-right .ac-list-sum>span{display: inline-block;height: 32px; width: 1px;background-color: #ccc;}
 /*活动信息报名用户*/
 .im-container{width:1000px;margin:0 auto;min-height: 526px;overflow: hidden;}
-.im-title{background: #fff;padding-top:24px;height:116px;position: relative;}
+.im-title{/*box-sizing: border-box;*/background: #fff;padding-top:20px;height:94px;position: relative;border:1px solid #ccc;}
 .im-title h1{font-size: 18px;margin-left:30px;color:#333;}
 .im-title .im-share{display: inline-block;}
 .im-title img{vertical-align: middle;}
 .im-title img.im-tag-img{margin-left:20px;margin-right:28px;}
 .im-title .im-share img{margin-right:6px;}
 .im-nav ul li{width:122px;text-align: center;float:left;font-weight: 600;font-size: 16px;padding-bottom: 12px;}
-.im-nav ul{overflow: hidden;margin-top: 54px;margin-left:33px;}
+.im-nav ul{overflow: hidden;margin-top: 31px;margin-left:33px;}
 .im-nav ul li.im-nav-active{border-bottom: 3px solid #3399ff;}
 .ac-signup-sum{position: absolute;right: 40px;top:0;}
 .ac-signup-sum div{min-width: 60px;text-align: center;padding: 6px 6px 18px 6px;background-color: #3399ff;color: #fff;position: relative;}
@@ -75,9 +75,9 @@
 .ac-query button{background: #3399FF;color:#fff;width:122px;margin-left:20px;}
 .im-btn{
   	display: inline-block;
-  padding: 10px 12px;
+  padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;

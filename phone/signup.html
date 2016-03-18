@@ -16,9 +16,9 @@
 				<div class="re-content">
 					<p>填写真实的资料方便我们稍后的短信通知</p>
 					<div class="form">
-						<input type="text" placeholder="联系人姓名"/>
+						<input type="text" placeholder="联系人姓名" id="re-name"/>
 						<input type="text" placeholder="联系人手机号" id="re-tel"/>
-						<p class="re-error"></p>
+						<!--<p class="re-error"></p>-->
 					</div>
 					<div class="re-choice">
 						<span>请选择性别</span>
@@ -50,7 +50,7 @@
 				
 				<div class="re-content">
 					<div class="form">
-						<input type="text" placeholder="电影名"/>
+						<input type="text" placeholder="电影名" id="re-film"/>
 						
 					</div>
 				</div>
@@ -80,6 +80,9 @@
 			
 		</div>
 		<button class="btn" id="signUp">立即报名</button>
+		<div class="re-tip-mask">
+			
+		</div>
 	</body>
 	<script src="js/jquery-1.12.0.js"></script>
 	<script type="text/javascript">
@@ -96,8 +99,16 @@
 		
 		$("#signUp").click(function(){
 			var tel = $("#re-tel").val();
+			var film = $("#re-film").val();
 			if(!validatePhone(tel)){
-				$(".re-error").html("手机号码格式不正确");
+				$(".re-tip-mask").html("手机格式不正确");
+				$(".re-tip-mask").fadeIn();
+				setTimeout('$(".re-tip-mask").fadeOut()',1000);
+			}
+			if(tel.length == 0||film.length == 0||(!$("input[name=film]").prop("checked"))||$("#class").find(".re-item-active").length==0||$("#sex").find(".re-item-active").length==0){
+				$(".re-tip-mask").html("请完善报名信息");
+				$(".re-tip-mask").fadeIn();
+				setTimeout('$(".re-tip-mask").fadeOut()',1000);
 			}
 		})
 		$("input").focus(function(){
