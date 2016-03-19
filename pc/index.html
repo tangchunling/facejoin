@@ -5,9 +5,11 @@
 		<title></title>
 		<link rel="stylesheet" href="css/login.css" />
 		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/activity.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	</head>
 	<body>
-		<header>
+		<header style="background-color: rgba(51,153,255,0.4);position: fixed;width: 100%;z-index: 999;">
 			<nav>
 				<a class="logo"><img src="images/FaceJoin.png" alt="" /></a>
 				<ul>
@@ -22,9 +24,66 @@
 				</div>
 			</nav>
 		</header>
-		<div class="container">
+		<div class="container" style="position: relative;">
+			<div class="index-container" id="fullpage">
+				<div class="index-img-list section index-img-active1">
+					<!--<img src="images/index1.png" alt="" />-->
+					<div class="index-img-content">
+						<div class="index-left">
+							<p>最智能的校园活动工具</p>
+							<h1>轻松发布活动</h1>
+							<span>一键分享至朋友圈、微博、QQ空间 快速生成 活动宣传页、活动报名页</span>
+						</div>
+						
+					</div>
+				</div>	
+				<div class="index-img-list section index-img-active2">
+					<!--<img src="images/index2.png" alt=""/>-->
+					<div class="index-img-content">
+						<div class="index-right">
+							<p>最智能的校园活动工具</p>
+							<h1>一键数据分析</h1>
+							<span>提供优质数据管理、大数据价值输出、总有你想要的结果</span>
+						</div>
+						
+					</div>
+				</div>
+				<div class="index-img-list section index-img-active3" style="position: relative;">
+					<!--<img src="images/index3.png" alt=""/>-->
+					<div class="index-img-content">
+						<div class="index-left">
+							<p>最智能的校园活动工具</p>
+							<h1>高效管理用户</h1>
+							<span>一键免费群发通知短信 快速生成签到表、提高活动效率</span>
+						</div>
+						
+					</div>
+					<footer class="footer-container index-foot">			
+						<div class="footer-content">
+							<div class="footer-content-left">
+								<p>“这只是一个占位符” by最伟大的设计师</p>
+								<p><a href="">关于我们</a>|<a href="">广告合作</a>|<a href="">联系我们</a>|<a href="">招聘英才</a></a></p>
+								<p>Copyright © 2016 - 2021 FaceJoin. All Rights Reserved. 蛋疼科技 版权所有</p>
+								<p>浙ICP备15004498</p>
+							</div>
+							<div class="footer-content-right">
+								<div class="footer-logo">
+									<img src="images/activity/logo_footer.png" alt="" />
+								</div>
+							</div>
+						</div>						
+					</footer>
+				</div>
+			</div>
+			
+			
 			
 		</div>
+		
+		<div class="index-arrow">
+			<img src="images/index_arrow.png" alt="" />
+		</div>
+		
 		<div class="lg-model" id="login-model">
 			<div class="lg-model-container">
 				<div class="lg-model-title">
@@ -51,8 +110,7 @@
 							<div class="lg-author-list">
 								<a href=""><img src="images/weibo.png" alt="" /></a>
 								<a href=""><img src="images/qq.png" alt="" /></a>
-								<a href=""><img src="images/weixin.png" alt="" /></a>
-								
+								<a href=""><img src="images/weixin.png" alt="" /></a>	
 							</div>
 						</div>
 					</div>
@@ -74,7 +132,28 @@
 		</div>
 	</body>
 	<script src='js/jquery-2.0.0.min.js'></script>
+	<script src='js/foot.js'></script>
+	<script src='js/head.js'></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 	<script type="text/javascript">
+		$(function(){
+		    $('#fullpage').fullpage({
+		    	 'navigation': true,
+		    	 'loopBottom': true
+		    });
+		set = setInterval("$.fn.fullpage.moveSectionDown()",5000);
+		 $(".index-arrow").click(function(){
+		 	$.fn.fullpage.moveSectionDown();
+		 	
+		 });
+		 $(".index-arrow,#fp-nav").hover(function(){
+		 	clearInterval(set);
+		 });
+		 $(".index-arrow,#fp-nav").mouseleave(function(){
+		 	set = setInterval("$.fn.fullpage.moveSectionDown()",5000);
+		 });
+		});
 		$("#login").click(function(){
 			$("#login-model").show();	
 		});
@@ -88,4 +167,5 @@
 			$("#code-model").show();	
 		});
 	</script>
+	
 </html>

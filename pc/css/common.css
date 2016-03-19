@@ -102,10 +102,38 @@ font-family: "微软雅黑";
 .headImg .navList ul li a{color:#000;font-size: 16px;}
 .headImg .navList ul li a img{width:18px;vertical-align: middle;margin-right: 24px;display: none;}
 .headImg .navList ul li a img.nav-img-show{display: inline-block;}
+/*首页*/
+.index-foot{position: absolute !important;bottom: 0;width:100%;background: rgba(0,0,0,0.2) !important;}
+.index-container .index-img-list{position: relative;}
+.index-container .index-img-list img{width:100%;display: block;}
+.index-container .index-img-list .index-img-content{position: absolute;top:172px;color:#fff;width:1170px;left:50%;margin-left:-585px;}
+.index-container .index-img-list .index-img-content .index-left{float: left;display: inline-block;}
+.index-container .index-img-list .index-img-content .index-right{float: right;display: inline-block;}
+.index-container .index-img-list .index-img-content p{font-size: 20px;margin-bottom: 60px;color:rgba(255,255,255,0.6);font-family: yuanti;}
+.index-container .index-img-list .index-img-content h1{font-size: 64px;margin-bottom: 24px;font-weight: 400;font-family: yuanti;}
+.index-container .index-img-list .index-img-content span{font-size: 18px;color:rgba(255,255,255,0.6);font-family: yuanti;}
+.index-container .index-img-active1{background: url(../images/index1.png) center center no-repeat;background-size: cover;}
+.index-container .index-img-active2{background: url(../images/index2.png) center center no-repeat;background-size: cover;}
+.index-container .index-img-active3{background: url(../images/index3.png) center center no-repeat;background-size: cover;}
+.index-arrow{display: inline-block;position: fixed;bottom: 40px;left:50%;animation: span 4s infinite;}
+
+#fp-nav span, .fp-slidesNavspan{border-color: #fff !important;}
+#fp-nav li .active span, .fp-slidesNav.active span{background: #fff !important;transform: scale(1.5);transform-origin: center;}
+
+@keyframes span{
+	0%{bottom: 40px;}
+	50%{bottom: 30px;}
+	100%{bottom: 40px;}
+}
+@font-face {
+	font-family:"yuanti";
+	src: url("yuanti.TTF");
+}
 
 @media (max-width: 1200px) {
 	header nav{width:1000px;}
 	header nav>ul{margin-left:80px;}
+	.index-container>.index-img-list>.index-img-content{width:1000px;margin-left: -500px;}
 }
 @media (min-height:768px) {
 	.container{min-height: ;}
