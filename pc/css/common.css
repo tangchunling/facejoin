@@ -93,12 +93,14 @@ font-family: "微软雅黑";
 .headImg:hover{background: #0954a7;}
 .headImg:hover .navList{display: block;}
 .headImg:hover:after{bottom:-10px;left:50%;margin-top:10px;margin-left:-10px;content: "";width:0;height:0;position: absolute;border:10px solid transparent;border-bottom-color: #fff;}
-.headImg .navList{display:none;margin-top:10px;border: 1px solid #ccc;border-top:0px solid transparent;padding-top: 16px;position: absolute;background-color: #fff; width: 180px;text-align: center;right: 0px;/*display: none;*/}
+.headImg .navList{display:none;margin-top:10px;border: 1px solid #ccc;border-top:0px solid transparent;padding: 6px 0;position: absolute;background-color: #fff; width: 180px;text-align: center;right: 0px;/*display: none;*/}
 .headImg .navList ul{margin-left: 0;}
-.headImg .navList ul li{border-bottom: 1px solid #aaa;height:50px;line-height: 50px;}
+.headImg .navList ul li{border-bottom: 1px solid #aaa;height:54px;line-height: 54px;}
 .headImg .navList ul li:last-child{border-bottom: none;}
 .headImg .navList ul li:hover{background: #3399FF;}
 .headImg .navList ul li:hover a{color:#fff;}
+.headImg .navList ul li.navlist-active a{color:#fff !important;}
+.headImg .navList ul li.navlist-active{background: #3399FF;}
 .headImg .navList ul li a{color:#000;font-size: 16px;}
 .headImg .navList ul li a img{width:18px;vertical-align: middle;margin-right: 24px;display: none;}
 .headImg .navList ul li a img.nav-img-show{display: inline-block;}

@@ -6,12 +6,15 @@
 }
 @font-face {
 	font-family: ltj;
-	font-style:  normal;
- 
+	font-style:  normal; 
 	src: url("../font/FZLTTHJW.TTF");
 }
+@font-face {
+	font-family: ltzh;
+	font-style:  normal; 
+	src: url("../font/ltzh.TTF");
+}
 .about_us {
-font-family: qianduanNet;
 	width: 920px;
 	padding: 10px 40px;
 	margin: auto;
@@ -52,22 +55,23 @@ font-family: qianduanNet;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #cccccc;
 	height: 28px;
-	line-height: 28px;
+        line-height: 28px;
         font-family:ltj;
+        position:relative;
 }
 
 .about_us_article {
 	position: relative;
-	margin-top: 36px;
-	margin-bottom: 72px;
+	margin-top: 40px;
+	margin-bottom: 56px;
 }
 
 .about_us_logo {
 	width: 226px;
 	height: 66px;
 	position: absolute;
-	right: 0px;
-	top: 0px;
+	right: 32px;
+	top: -7px;
 	background-color: #3399ff;
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
@@ -75,7 +79,8 @@ font-family: qianduanNet;
 }
 
 .team_user_info {
-	margin: 28px 0px;
+	margin-top:40px;
+        margin-bottom:30px;
 	overflow: hidden;
 	color: rgb(102,102,102);
 }
@@ -88,10 +93,10 @@ font-family: qianduanNet;
 }
 
 .team_user_info figure img {
-	width: 102px;
-	height: 102px;
-	border-radius: 51px;
-	margin-bottom: 24px;
+	width: 84px;
+	height: 84px;
+	border-radius: 42px;
+	margin-bottom: 28px;
 }
 
 .team_user_info figcaption span {
@@ -105,7 +110,7 @@ font-family: qianduanNet;
 }
 
 .talented_article hr {
-	width: 520px;
+	width: 700px;
 	margin-top: 39px;
 	border: 1px solid #cccccc;
 	border-top: none;
@@ -117,7 +122,7 @@ font-family: qianduanNet;
 	
 	margin-top: 0px;
 	margin-bottom: 24px;
-        font-family: ltj;
+        font-family: ltzh;
 }
 
 .work_content {
@@ -125,20 +130,20 @@ font-family: qianduanNet;
 	color: #333333;
 	
 	margin-bottom: 20px;
-        font-family: ltj;
+        font-family: ltzh;
 }
 
 .work_require {
 	font-size: 16px;
 	color: #333333;
-	font-family: ltj;
+	font-family: ltzh;
 	margin-bottom: 24px;
 	margin-top: 20px;
 }
 
 .cooperation_article {
 	position: relative;
-	margin: 30px 0px;
+	margin: 40px 0px;
 }
 
 .ab_article_out {
@@ -154,7 +159,7 @@ font-family: qianduanNet;
 }
 
 .ab_article_big {
-	margin-bottom: 36px;
+	margin-bottom: 28px;
 }
 
 .contact_us_logo {
@@ -172,13 +177,18 @@ font-family: qianduanNet;
 }
 
 .b_font_right {
-	float: right;
+	position:absolute;
+        right:0px;
+        bottom:8px;
+        line-height:normal;
 	font-size: 14px;
-	margin-top: 10px;
 	font-weight: normal;
-font-family:lth;
+        font-family:qianduanNet;
 }
-
+.talented_resume{
+float:right;
+margin-top:10px;
+}
 
 
 
