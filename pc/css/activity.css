@@ -158,3 +158,8 @@
 .new-code .new-cichun div:last-child span{margin:4px;color:#3399FF;cursor: pointer;}
 .new-code .new-cichun div:first-child{margin-bottom: 8px;}
 .new-spread-container button{width:100px;position: absolute;font-size:14px;background-color: #fff;border: 1px solid #3399ff; color: #3399ff; padding: 6px 12px; right: 56px;top: 56px;}
+
+.ac-select-list{position: relative;}
+.ac-select-list ul{display:none;position: absolute;background: #fff;z-index: 1000;width:100%;left: 0;top: 40px;overflow: hidden;}
+.ac-select-list ul li{height:40px;line-height: 40px;border-bottom: 1px solid #ccc;cursor: pointer;}
+.ac-select-list ul li:hover{background: #3399FF;color:#fff;}
