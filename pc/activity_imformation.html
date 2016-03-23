@@ -134,12 +134,19 @@
 					</div>
 				</div>						
 		</footer>
+		<div class="activity-mask">
+			<p>第三方分享通道暂未开通，敬请期待</p>
+			<button class="btn-null" id="ac-ok">好的</button>
+		</div>
 	</body>
 	<script src='js/jquery-2.0.0.min.js'></script>
 	<script src='js/foot.js'></script>
 	<script src='js/head.js'></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$("#ac-ok").click(function(){
+				$(".activity-mask").fadeOut();
+			});
 			$(".ac-select-list").click(function(){
 				$(this).find("ul").toggle();
 				$(this).find("ul li").click(function(){

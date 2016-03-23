@@ -163,3 +163,7 @@
 .ac-select-list ul{display:none;position: absolute;background: #fff;z-index: 1000;width:100%;left: 0;top: 40px;overflow: hidden;}
 .ac-select-list ul li{height:40px;line-height: 40px;border-bottom: 1px solid #ccc;cursor: pointer;}
 .ac-select-list ul li:hover{background: #3399FF;color:#fff;}
+
+.activity-mask{position: absolute;width:328px;height:160px;top:180px;left:50%;margin-left: -164px;border: 1px solid #ccc;z-index: 999;background: #fff;text-align: center;box-shadow: 0 0 5px rgba(0,0,0,0.16);}
+.activity-mask p{margin-top: 40px;font-size: 16px;color:#333;}
+.activity-mask button{width:130px;margin-top: 40px;padding: 6px 12px;}

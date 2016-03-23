@@ -7,7 +7,7 @@ header nav>ul li{display: inline-block;}
 header nav>ul li a{display: inline-block;height:60px;line-height:60px;padding:0 30px;color:#fff;font-size: 16px;}
 header nav>ul li.active a{background: #0a54a6;}
 header nav>ul{display: inline-block;margin-left:70px;}
-header nav .logo img{vertical-align: middle;}
+header nav .logo img{vertical-align: sub;}
 header nav .login{display: inline-block;float: right;color: #fff;height:60px;line-height:60px;}
 header nav .login a{margin:0 10px;}
 header nav .tip{float: right;color:#999;}
