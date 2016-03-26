@@ -909,12 +909,13 @@ z-index:9999;
 	height: 534px;
 	margin: 92px auto;
 	position: relative;
-
+	overflow: hidden;
 }
 .preview_top{
 	width: 100%;
 	position: absolute;
 	top:-2px;
+	z-index: 999;
 }
 .preview_poster{
 	width: 100%;
@@ -972,11 +973,11 @@ z-index:9999;
 }
 .preview_desc{
 	width: 90%;
-	height: 100px;
 	margin: auto;
 	overflow: hidden;
 	font-size: 14px;
 	color: #000000;
+	padding-bottom: 20px;
 }
 .preview_footer{
 	position: absolute;
